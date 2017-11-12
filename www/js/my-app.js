@@ -1,43 +1,117 @@
-// Initialize app
-var myApp = new Framework7();
+// Initialize your app
+var myApp = new Framework7({
+    swipePanel: 'left'
+});
 
-
-// If we need to use custom DOM library, let's save it to $$ variable:
+// Export selectors engine
 var $$ = Dom7;
 
 // Add view
+/* Initialize views */
 var mainView = myApp.addView('.view-main', {
-    // Because we want to use dynamic navbar, we need to enable it for this view:
-    dynamicNavbar: true
+  dynamicNavbar: true
 });
 
-// Handle Cordova Device Ready Event
-$$(document).on('deviceready', function() {
-    console.log("Device is ready!");
+var view1 = myApp.addView('#view-1',{
+  dynamicNavbar: true
+});
+var view2 = myApp.addView('#view-2',{
+    // Because we use fixed-through navbar we can enable dynamic navbar
+ dynamicNavbar: true
 });
 
-
-// Now we need to run the code that will be executed only for About page.
-
-// Option 1. Using page callback for page (for "about" page in this case) (recommended way):
+// Callbacks to run specific code for specific pages, for example for About page:
 myApp.onPageInit('about', function (page) {
-    // Do something here for "about" page
+    // run createContentPage func after link was clicked
+    $$('.create-page').on('click', function () {
+        createContentPage();
+    });
+});
 
-})
+var mySearchbar = app.searchbar('.searchbar', {
+    searchList: '.list-block-search',
+    searchIn: '.item-title'
+});  
 
-// Option 2. Using one 'pageInit' event handler for all pages:
-$$(document).on('pageInit', function (e) {
-    // Get page data from event data
-    var page = e.detail.page;
+// Generate dynamic page
+var dynamicPageIndex = 0;
+function createContentPage() {
+	mainView.router.loadContent(
+        '<!-- Top Navbar-->' +
+        '<div class="navbar">' +
+        '  <div class="navbar-inner">' +
+        '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
+        '    <div class="center sliding">Dynamic Page ' + (++dynamicPageIndex) + '</div>' +
+        '  </div>' +
+        '</div>' +
+        '<div class="pages">' +
+        '  <!-- Page, data-page contains page name-->' +
+        '  <div data-page="dynamic-pages" class="page">' +
+        '    <!-- Scrollable page content-->' +
+        '    <div class="page-content">' +
+        '      <div class="content-block">' +
+        '        <div class="content-block-inner">' +
+        '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
+        '          <p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' +
+        '        </div>' +
+        '      </div>' +
+        '    </div>' +
+        '  </div>' +
+        '</div>'
+    );
+	return;
+};
+function resultfn1(){
+	alert("1234");
+};
 
-    if (page.name === 'about') {
-        // Following code will be executed for page with data-page attribute equal to "about"
-        myApp.alert('Here comes About page');
+
+function resultfn(){
+	var stor1;
+	document.getElementById('A2').innerHTML=stor1;
+//	stor1==myApp.document.getElementByName('storona1').value;
+	
+	alert(stor1);
+	
+	//content-block-title.name.result="3";
+	
+};
+
+/* ===== Virtual List ===== */
+myApp.onPageInit('virtual-list', function (page) {
+    // Generate array with 10000 demo items:
+    var items = [];
+    for (var i = 0; i < 10000; i++) {
+        items.push({
+            title: 'Item ' + i,
+            subtitle: 'Subtitle ' + i
+        });
     }
-})
 
-// Option 2. Using live 'pageInit' event handlers for each page
-$$(document).on('pageInit', '.page[data-page="about"]', function (e) {
-    // Following code will be executed for page with data-page attribute equal to "about"
-    myApp.alert('Here comes About page');
-})
+    // Create virtual list
+    var virtualList = myApp.virtualList($$(page.container).find('.virtual-list'), {
+        // Pass array with items
+        items: items,
+        // Custom search function for searchbar
+        searchAll: function (query, items) {
+            var found = [];
+            for (var i = 0; i < items.length; i++) {
+                if (items[i].title.indexOf(query) >= 0 || query.trim() === '') found.push(i);
+            }
+            return found; //return array with mathced indexes
+        },
+        // List item Template7 template
+        template: '<li>' +
+                    '<a href="#" class="item-link item-content">' +
+                      '<div class="item-inner">' +
+                        '<div class="item-title-row">' +
+                          '<div class="item-title">{{title}}</div>' +
+                        '</div>' +
+                        '<div class="item-subtitle">{{subtitle}}</div>' +
+                      '</div>' +
+                    '</a>' +
+                  '</li>',
+        // Item height
+        height: 73,
+    });
+});
