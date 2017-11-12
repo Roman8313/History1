@@ -28,6 +28,16 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
+document.addEventListener("deviceready", onDeviceReady, false); 
+function onDeviceReady() { 
+    document.addEventListener("backbutton", onBackKeyDown, false);
+    document.getElementById("openBrowser").addEventListener("click", openBrowser);
+    document.getElementById("QRalert").addEventListener("click", dialogAlert);
+    console.log(navigator.notification);
+} 
+
+function onBackKeyDown() { mainView.router.back(); };
+
 var mySearchbar = app.searchbar('.searchbar', {
     searchList: '.list-block-search',
     searchIn: '.item-title'
