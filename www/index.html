@@ -31,13 +31,57 @@
 
     // device APIs are available
     //    
-   
-     function exitFromApp()
+
+      
+           // Wait for device API libraries to load
+    //
+    function onLoad() {
+    navigator.splashscreen.show();   
+    animateNavBackIcon:true; 
+   // document.addEventListener("deviceready", onDeviceReady, false);    
+    };
+
+    // device APIs are available
+    //    
+    </script> 
+     
+
+   <script> 
+	   document.addEventListener("deviceready", appReady, false); 
+             function appReady(){ 
+            document.addEventListener('backbutton', function (e) {
+e.preventDefault();
+/ Check for open panels /
+if ($$('.panel.active').length > 0) {
+f7.closePanel();
+return;
+}
+/ Check for go back in history /
+var view = f7.getCurrentView();
+if (!view) return;
+if (view.history.length > 1) {
+view.router.back();
+return;
+}
+Quit app /
+navigator.notification.confirm(
+‘Выйти из приложения ?’, // message
+function (n) {
+if (n == 1) navigator.app.exitApp();
+},
+‘Bite To Eat’, // title
+['OK', ‘Cancel’] // button labels
+);
+}, false)
+
+             } </script>
+ <script>
+ 
+	 function exitFromApp()
        {
-           navigator.app.exitApp();
-       };               
-               
-    </script>   
+        navigator.app.exitApp();
+       }; 
+      </script>    
        
   </head>
 
