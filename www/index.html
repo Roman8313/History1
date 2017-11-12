@@ -1,99 +1,302 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-
-    <!-- Required meta tags-->
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#2196f3">
     <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-
-    <!-- Your app title -->
-    <title>My App</title>
-
-    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
-        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
-     -->
-
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
-
+    <title>Framework7 Material</title>
+    <link rel="stylesheet" href="css/framework7.material.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet"> 
+    <link href="fonts/GOST-type-A.ttf" rel="stylesheet">
+    <link rel="stylesheet" href="css/material-icons.css">
     <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link rel="icon" href="img/icon.png">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
 
-<body>
-    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+    navigator.splashscreen.show();   
+    animateNavBackIcon:true; 
+    pushState: true;
+        
+    };
+
+    // device APIs are available
+    //    
+   
+     function exitFromApp()
+       {
+           navigator.app.exitApp();
+       };               
+               
+    </script>   
+       
+  </head>
+
+
+  <body onload="startTime()" class="theme-red" onload="onLoad()">
+    <!-- Status bar overlay for fullscreen mode-->
     <div class="statusbar-overlay"></div>
-
     <!-- Panels overlay-->
     <div class="panel-overlay"></div>
     <!-- Left panel with reveal effect-->
-    <div class="panel panel-left panel-reveal">
+    <div class="panel panel-left panel-reveal panelgrey">
+		<a href="index.html"><img src="img/222.png" width="100%"></a>
+      <div class="content-block">
+
+ 
+<div class="list-block accordion-list">
+  <ul>
+    <li class="accordion-item">
+        <div class="item-inner">
+             <a href="searchbar.html" onclick="fn1()" data-ignore-cache="true">
+                 <i class="material-icons panel_white">search</i>Поиск  
+             </a>
+         </div>     
+    </li>
+    <li class="accordion-item">
+       <a href="#" class="item-content item-link panel_white">
+        <div class="item-inner">
+          <div class="item-title panel_white">Пробоотборники</div>
+        </div></a>
+     <div class="accordion-item-content">
         <div class="content-block">
-            <p>Left panel content goes here</p>
+			<p>-<a href="pgolist.html" data-ignore-cache="true" class="graylink">Газа</a></p>
+			<p>-<a href="neftlist.html" data-ignore-cache="true" class="graylink">Нефтепродуктов</a></p>
+			<p>-<a href="paintlist.html" data-ignore-cache="true" class="graylink">Красок</a></p>
+			<p>-<a href="agress.html" data-ignore-cache="true" class="graylink">Агрессивных сред</a></p>
+			<p>-<a href="eda.html" data-ignore-cache="true" class="graylink">Пищевых продуктов</a></p>
         </div>
+      </div>
+    </li>
+
+    <li class="accordion-item">
+       <a href="viscolist.html" data-ignore-cache="true" class="close-panel" > 
+        <div class="item-inner">
+          <div class="item-title mainlinks panel_white">
+			Вискозиметры
+          </div>
+        </div>
+        </a>
+    </li>
+ 
+    <li class="accordion-item">
+        <a href="microlist.html" data-ignore-cache="true" class="close-panel">
+        <div class="item-inner">
+				<div class="item-title mainlinks panel_white">
+				  Микрошприцы
+				</div>          
+			 </div>
+         </a>       
+   	</li>
+   	
+   	<script>
+    var myApp = new Framework7();
+    var $$ = Dom7;
+ 
+    $$('.open-left-panel').on('click', function (e) {
+        // 'left' position to open Left panel
+        myApp.openPanel('left');
+    });
+    $$('.open-right-panel').on('click', function (e) {
+        // 'right' position to open Right panel
+        myApp.openPanel('right');
+    }); 
+    $$('.panel-close').on('click', function (e) {
+        myApp.closePanel();
+    });
+ 
+  </script>
+
+
+   	
+   	
+
+  </ul>
+</div>     
+	       
+
+		  
+  
+   
+      </div>
     </div>
 
-    <!-- Views -->
-    <div class="views">
-        <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main">
-            <!-- Top Navbar-->
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-                    <div class="center sliding">Awesome App</div>
-                    <div class="right">
-                        <!--
-                          Right link contains only icon - additional "icon-only" class
-                          Additional "open-panel" class tells app to open panel when we click on this link
-                        -->
-                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
-                    </div>
-                </div>
+    <!-- Views-->
+    <div class="views ">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+       
+              <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner sliding">
+            <!-- We have home navbar without left link-->
+            <div class="left">
+           
+              </div>
+            <div class="center"></div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class-->
+               
+              <!--  <a href="searchbar.html" class="item-con">
+                 <i class="material-icons panel_white">search</i>Поиск  
+             </a>-->
+               <!-- <a href="#" class="link icon-only open-panel"> 
+              <i class="icon icon-bars"></i></a>-->
             </div>
-            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
-            <div class="pages navbar-through toolbar-through">
-                <!-- Page, "data-page" contains page name -->
-                <div data-page="index" class="page">
-                    <!-- Scrollable page content -->
-                    <div class="page-content">
-                        <div class="content-block">
-                            <p>Page content goes here
-                            
-                            <img src="img/Logo4.png"> </p>
-                            <!-- Link to another page -->
-                            <a href="about.html">About app</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Bottom Toolbar-->
-            <div class="toolbar">
-                <div class="toolbar-inner">
-                    <!-- Toolbar links -->
-                    <a href="#" class="link">Link 1</a>
-                    <a href="#" class="link">Link 2</a>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
+        
+       <div class="pages navbar-trought toolbar-trought">
+        <div data-page="index" class="page">
+          <div class="page-content">
+          
+ 
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+
+            <!-- Scrollable page content-->
+            <div class="page-content swipeout-content">
+              <div class="content-block-title">ООО "Лабораторные Технологии"</div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                       <p>
+                  	Наша организация ООО "Лабораторные Технологии" предлагает своим клиентам такое оборудование, как микрошприцы, различные пробоотборники и оборудование к ним, емкости из нержавеющей стали. 
+                    </p>
+                        <a href="datalist.html" class="button button-fill" data-view="#view-2">
+				VIEW2</a>
+                    <br>
+                      <a href="contacts.html" class="button button-fill">
+				VIEW2</a>
+                    
+                     <script type="text/javascript">
+	  function fn1(){
+		  
+
+var xx1;
+var xx2;	
+var xx3;
+var xx;		  
+xx1=parseInt(document.FormOne.st1.value);
+xx2=parseInt(document.FormOne.st2.value);
+xx3=parseInt(document.FormOne.st3.value);
+
+		  
+xx=(xx1+xx2+xx3)/2;	
+alert(xx);		  
+
+xx=xx*(xx-xx1)*(xx-xx2)*(xx-xx3)
+		  
+alert(xx);
+
+xx=Math.sqrt(xx);	
+		  
+
+alert(xx);
+	  
+/*document.FormOne.st2.value=xx2;*/
+	  } ;
+</script>            
+<div class="content-block">                          
+<form name="FormOne">   
+
+      <div class="item-content">
+
+        <div class="item-inner">
+          <div class="item-title label" style="float:left; margin-right: 30px;">Stor1</div>
+          <div class="item-input">
+              <input type="text" name="st1" id="inp1" placeholder="Input">
+          </div>
+        </div>
+      </div>
+
+    <br>
+    
+      <div class="item-content">
+    
+        <div class="item-inner">
+          <div class="item-title label" style="float:left; margin-right: 30px;">Stor2</div>
+          <div class="item-input">
+              <input name="st2" type="text" id="inp2" placeholder="Input">
+          </div>
+        </div>
+      </div>
+        <br>
+            <div class="item-content">
+    
+        <div class="item-inner">
+          <div class="item-title label" style="float:left; margin-right: 30px;">Stor3</div>
+          <div class="item-input">
+              <input name="st3" type="text" id="inp3" placeholder="Input">
+          </div>
+        </div>
+	</div></form>
+               
+<br>
+ <a href="#">
+                  	  <input type=button value="Расчет" class="button button-big button-fill color-green" onclick="fn1()">   
+                  </a>     
+
+                </div>
+              </div>
+             
+    
+    
+       
+            </div>
+          </div>
+          
+
+        </div>
+        <!-- Bottom Toolbar-->
+		   </div>
+		   
+		   </div>
+		   
+
+		   		                            <!-- Toolbar has additional "toolbar-bottom" class -->
+  <div class="toolbar toolbar-bottom">
+    <div class="toolbar-inner toolbar-black">
+      <a href="datalist.html" class="link">ДАТЫ&nbsp;&nbsp;   </a>
+          <a href="#" class="link icon-only open-panel"> 
+              <i class="icon icon-bars"></i>
+          </a>
+      <a href="peoplelist.html" class="link">ЛЮДИ</a>
+   </div>
+  </div>
+		   
+		   </div>
+      
+
+	<!--data-view="#view-2" -->
+    
+
+
+
+    
+
+     
+    
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/CallNumber.js"></script>
+    <script>
+         var myApp = new Framework7({
+             swipePanel: 'left'
+         });
+      </script>
 
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
-    <script type="text/javascript" src="js/my-app.js"></script>
-</body>
-
+  </body>
 </html>
+
+
