@@ -81,7 +81,7 @@ color:#2196f3!important;
 	background-color: red;
 }
 .back_fon{
-	background: url(img/blue.jpg);
+	background: url('../img/blue.jpg');
 }
 .inp_shadow{
 	    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.64);
