@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#2196f3">
+    <meta name="format-detection" content="telephone=no">
+    <title>Framework7 Material</title>
+    <link rel="stylesheet" href="css/framework7.material.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/icon.png">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    // Wait for device API libraries to load
+    function onLoad() {
+    navigator.splashscreen.show();   
+    animateNavBackIcon:true;   
+    };
+    </script>     
+  <script type="text/javascript" charset="utf-8" src="js/cordova_plugins.js">
+  </script>
+   <script> document.addEventListener("deviceready", appReady, false); 
+             function appReady(){ 
+               document.addEventListener('backbutton', function (e) {
+e.preventDefault();
+/ Check for open panels /
+if ($$('.panel.active').length > 0) {
+f7.closePanel();
+return;
+}
+/ Check for go back in history /
+var view = f7.getCurrentView();
+if (!view) return;
+if (view.history.length > 1) {
+view.router.back();
+return;
+}
+Quit app /
+navigator.notification.confirm(
+‘Exit Application ?’, // message
+function (n) {
+if (n == 1) navigator.app.exitApp();
+},
+‘Bite To Eat’, // title
+['OK', ‘Cancel’] // button labels
+);
+}, false)
+             } </script>
+ <script>
+          function exitFromApp()
+       {
+           navigator.app.exitApp();
+       }; 
+      </script>         
+  </head>
+  <body onload="startTime()" class="theme-red" onload="onLoad()">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal panelgrey">
+		<a href="index.html"><img src="img/222.png" width="100%"></a>
+      <div class="content-block">
+ 
+<div class="list-block accordion-list">
+  <ul>
+    <li class="accordion-item">
+        <div class="item-inner panel_white">
+             <a href="searchbar.html" class="item-content item-link panel_white close-panel">
+                 <i class="material-icons panel_white">search</i>Поиск 
+                 
+             </a>
+         </div>     
+    </li>
+    
+     <li class="accordion-item">
+       <a href="problist.html" data-ignore-cache="true" class="close-panel" > 
+        <div class="item-inner">
+          <div class="item-title mainlinks panel_white">
+				  <i class="material-icons icon-settings">work</i>Пробоотборники
+          </div>
+        </div>
+        </a>
+    </li>
+    
+    <li class="accordion-item">
+       <a href="viscolist.html" data-ignore-cache="true" class="close-panel" > 
+        <div class="item-inner">
+          <div class="item-title mainlinks panel_white">
+			 <i class="material-icons icon-settings">opacity</i>Вискозиметры
+          </div>
+        </div>
+        </a>
+    </li>
+ 
+    <li class="accordion-item">
+        <a href="microlist.html" data-ignore-cache="true" class="close-panel">
+        <div class="item-inner">
+				<div class="item-title mainlinks panel_white">
+				 	  <i class="material-icons icon-settings">done</i> Микрошприцы
+				</div>          
+			 </div>
+         </a>       
+   	</li>
+         <li class="accordion-item">
+       <a href="ventilist.html" data-ignore-cache="true" class="close-panel" > 
+        <div class="item-inner">
+          <div class="item-title mainlinks panel_white">
+				  <i class="material-icons icon-settings">done</i>Вентиля
+          </div>
+        </div>
+        </a>
+    </li>
+      
+    <li class="accordion-item">
+       <a href="dopoln.html" data-ignore-cache="true" class="close-panel" > 
+        <div class="item-inner">
+          <div class="item-title mainlinks panel_white">
+				<i class="material-icons icon-settings">done</i>Дополнительно
+          </div>
+        </div>
+        </a>
+    </li>
+      
+   	<script>
+    var myApp = new Framework7();
+    var $$ = Dom7;
+ 
+    $$('.open-left-panel').on('click', function (e) {
+        // 'left' position to open Left panel
+        myApp.openPanel('left');
+    });
+    $$('.open-right-panel').on('click', function (e) {
+        // 'right' position to open Right panel
+        myApp.openPanel('right');
+    }); 
+    $$('.panel-close').on('click', function (e) {
+        myApp.closePanel();
+    });
+ 
+  </script>
+   	
+   
+    
+      <li class="accordion-item">
+        <a href="tel:+1234567" onclick="callhome()" data-ignore-cache="true">
+			<div class="item-inner">
+				<div class="item-title mainlinks panel_white">		 
+		  <i class="material-icons icon-settings">call</i>
+                Позвонить нам   </div>       
+			 </div>
+         </a>       
+      </li>
+    
+   	   	 <li class="accordion-item">
+			<div class="item-inner">
+			  <a href="question.html" data-ignore-cache="true" class="graylink close-panel">
+				<div class="item-title mainlinks panel_white">		 
+		  <i class="material-icons icon-settings">help</i>
+		  Справка</div>   
+		       </a>      
+		    </div>
+    </li>
+   	  	
+   	<li class="accordion-item">
+        
+			<div class="item-inner">
+			  <a href="#" data-ignore-cache="true" class="graylink" onClick="exitFromApp()">
+				<div class="item-title mainlinks panel_white">		 
+		      <i class="material-icons icon-settings">cancel</i> Выход      
+                </div>
+         </a> 
+        </div> 
+   	</li>
+   	
+   	
+  </ul>
+</div>     
+	       
+		  
+  
+   
+      </div>
+    </div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="left">
+           
+              </div>
+            <div class="center sliding"></div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class-->
+                <a href="#" class="link icon-only open-panel"> 
+              <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content swipeout-content">
+              <div class="content-block-title">
+              <h3>
+                  ООО "Лабораторные Технологии"
+              </h3></div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                       <p>
+                  	Наша организация ООО "Лабораторные Технологии" предлагает своим клиентам такое оборудование, как микрошприцы, различные пробоотборники и оборудование к ним, емкости из нержавеющей стали. 
+                    </p>
+                    
+       
+<ul>
+   <li>
+     Микрошприцы АГАТ МШ-10, МШ-1, МШ-50, Газохром (различного объема) 
+</li>
+  <li>
+      Различные пробоотборники ПГО и оборудование к ним 
+  </li>
+  <li>
+      Емкости из нержавеющей стали по чертежам заказчика.
+  </li>
+  <li>
+       Вискозиметр ВЗ-246 и ВЗ-4 для измерения условной вязкости жидкостей.
+  </li>
+  <li>
+          Запорная арматура и вентили точной регулировки и ВТР-1 и ВТР-1-М160
+  </li>
+  <li>
+          Бомбы Рейда
+  </li>
+   </ul>
+   
+    <input type="button" onclick="scanner()" value="QRSCANNER">
+    
+   		
+                 <br>
+                  
+                  
+                  <div class="list-block">
+</div>
+               <br><br>
+                
+                  
+           
+                  <br>
+                  
+                  
+                </div>
+              </div>
+             
+    
+    
+       
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar">
+          <div class="toolbar-inner theme-black"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/CallNumber.js"></script>
+    <script>
+         var myApp = new Framework7({
+             swipePanel: 'left'
+         });
+      </script>
+    <script type="text/javascript" src="cordova.js"></script>
+  </body>
+</html>
+
+
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.roman.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>app3</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <preference name="DisallowOverscroll" value="true" />
+        <preference name="AutoHideSplashScreen" value="true" />
+        <preference name="SplashScreen" value="screen" />
+        <preference name="SplashScreenDelay" value="3000" />
+        <preference name="SplashMaintainAspectRatio" value="true" />
+        <preference name="android-minSdkVersion" value="14" />
+        <preference name="StatusBarBackgroundColor" value="#e60505" />
+        <preference name="SplashShowOnlyFirstTime" value="false" />
+        <splash density="land-hdpi" src="res/img/screen.png" />
+        <splash density="land-ldpi" src="res/img/screen.png" />
+        <splash density="land-mdpi" src="res/img/screen.png" />
+        <splash density="land-xhdpi" src="res/img/screen.png" />
+        <splash density="port-hdpi" src="res/img/screen.png" />
+        <splash density="port-ldpi" src="res/img/screen.png" />
+        <splash density="port-mdpi" src="res/img/screen.png" />
+        <splash density="port-xhdpi" src="res/img/screen.png" />
+        <icon density="ldpi" src="res/icon/android/drawable-ldpi-icon.png" />
+        <icon density="mdpi" src="res/icon/android/drawable-mdpi-icon.png" />
+        <icon density="hdpi" src="res/icon/android/drawable-hdpi-icon.png" />
+        <icon density="xhdpi" src="res/icon/android/drawable-xhdpi-icon.png" />
+        <icon density="xxhdpi" src="res/icon/android/drawable-xxhdpi-icon.png" />
+        <icon density="xxxhdpi" src="res/icon/android/drawable-xxxhdpi-icon.png" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <engine name="android" spec="^6.2.3" />
+    <plugin name="cordova-plugin-console" spec="1.0.7" />
+    <plugin name="cordova-plugin-dialogs" />
+    <plugin name="cordova-plugin-inappbrowser" />
+    <plugin name="cordova-plugin-statusbar" spec="1.0.1" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
+    <plugin src="https://github.com/phonegap/phonegap-plugin-barcodescanner"/>   
+    <plugin src="https://github.com/apache/cordova-plugin-splashscreen"/>   
+    <plugin name="CordovaCallNumberPlugin" spec="https://github.com/Rohfosho/CordovaCallNumberPlugin.git" />
+    <plugin src="https://github.com/peutetre/PhoneGap-PhoneDialer"/>
+</widget>
+

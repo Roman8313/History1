@@ -11,13 +11,8 @@
     <title>Framework7 Material</title>
     <link rel="stylesheet" href="css/framework7.material.css">
     <link rel="stylesheet" href="css/framework7.material.colors.css">
-    <!--<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">-->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet"> 
-    <link rel="stylesheet" href="fonts/roboto-thin.ttf">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
-    
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100"  rel="stylesheet" type="text/css">
-    
     <link rel="stylesheet" href="css/material-icons.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="img/icon.png">
@@ -77,7 +72,7 @@ if (n == 1) navigator.app.exitApp();
   </head>
 
 
-  <body onload="startTime()" class="theme-black" onload="onLoad()">
+  <body onload="startTime()" class="theme-red" onload="onLoad()">
     <!-- Status bar overlay for fullscreen mode-->
     <div class="statusbar-overlay"></div>
     <!-- Panels overlay-->
@@ -85,29 +80,20 @@ if (n == 1) navigator.app.exitApp();
     <!-- Left panel with reveal effect-->
     <div class="panel panel-left panel-reveal panelgrey">
 		<a href="index.html"><img src="img/222.png" width="100%"></a>
-      <div class="content-block" style="margin-top:-30px;">
+      <div class="content-block">
  
 <div class="list-block accordion-list">
   <ul>
-   <!-- <li class="accordion-item">
-		<div class="item-inner panel_white">
-			 <a href="searchbar.html" class="item-content item-link panel_white close-panel">
-			   <i class="material-icons panel_white">search</i>Поиск 
-			 </a>
-		 </div>     
-    </li>-->
-    
-     <li class="accordion-item menu-back">
-       <a href="searchbar.html" data-ignore-cache="true" class="close-panel" > 
-        <div class="item-inner">
-          <div class="item-title mainlinks panel_white">
-			   <i class="material-icons panel_white icon-settings">search</i>Поиск 
-          </div>
-        </div>
-        </a>
+    <li class="accordion-item">
+        <div class="item-inner panel_white">
+             <a href="searchbar.html" class="item-content item-link panel_white close-panel">
+                 <i class="material-icons panel_white">search</i>Поиск 
+                 
+             </a>
+         </div>     
     </li>
     
-    <li class="accordion-item menu-back" stile="border:1px solid white;">
+     <li class="accordion-item">
        <a href="problist.html" data-ignore-cache="true" class="close-panel" > 
         <div class="item-inner">
           <div class="item-title mainlinks panel_white">
@@ -117,7 +103,7 @@ if (n == 1) navigator.app.exitApp();
         </a>
     </li>
     
-    <li class="accordion-item menu-back">
+    <li class="accordion-item">
        <a href="viscolist.html" data-ignore-cache="true" class="close-panel" > 
         <div class="item-inner">
           <div class="item-title mainlinks panel_white">
@@ -127,31 +113,30 @@ if (n == 1) navigator.app.exitApp();
         </a>
     </li>
  
-    <li class="accordion-item menu-back">
-      <a href="microlist.html" data-ignore-cache="true" class="close-panel">
+    <li class="accordion-item">
+        <a href="microlist.html" data-ignore-cache="true" class="close-panel">
         <div class="item-inner">
-			<div class="item-title mainlinks panel_white">
-		 	  <i class="material-icons icon-settings">done</i> Микрошприцы
+				<div class="item-title mainlinks panel_white">
+				 	  <i class="material-icons icon-settings">done</i> Микрошприцы
 				</div>          
 			 </div>
          </a>       
    	</li>
-   	
-    <li class="accordion-item menu-back">
+         <li class="accordion-item">
        <a href="ventilist.html" data-ignore-cache="true" class="close-panel" > 
         <div class="item-inner">
           <div class="item-title mainlinks panel_white">
-			<i class="material-icons icon-settings">toys</i>Вентиля
+				  <i class="material-icons icon-settings">done</i>Вентиля
           </div>
         </div>
         </a>
     </li>
       
-    <li class="accordion-item menu-back">
+    <li class="accordion-item">
        <a href="dopoln.html" data-ignore-cache="true" class="close-panel" > 
         <div class="item-inner">
           <div class="item-title mainlinks panel_white">
-				<i class="material-icons icon-settings">add</i>Дополнительно
+				<i class="material-icons icon-settings">done</i>Дополнительно
           </div>
         </div>
         </a>
@@ -179,8 +164,8 @@ if (n == 1) navigator.app.exitApp();
    
 
     
-      <li class="accordion-item menu-back">
-        <a href="tel:88313367613" onclick="callhome()" data-ignore-cache="true">
+      <li class="accordion-item">
+        <a href="tel:+1234567" onclick="callhome()" data-ignore-cache="true">
 			<div class="item-inner">
 				<div class="item-title mainlinks panel_white">		 
 		  <i class="material-icons icon-settings">call</i>
@@ -188,26 +173,8 @@ if (n == 1) navigator.app.exitApp();
 			 </div>
          </a>       
       </li>
-           	 
-   <!--  <li class="accordion-item menu-back">
-        <a href="tel:88313367613" onclick="callhome1()" data-ignore-cache="true">
-			<div class="item-inner">
-				<div class="item-title mainlinks panel_white">		 
-		  <i class="material-icons icon-settings">call</i>
-                Позвонить нам 1  </div>       
-			 </div>
-         </a>       
-      </li>-->   	 
-       	 <li class="accordion-item menu-back">
-			<div class="item-inner">
-			    <a href="#" onclick="openBrowser()" data-ignore-cache="true" class="graylink close-panel">
-				<div class="item-title mainlinks panel_white">		 
-		  <i class="material-icons icon-settings">web</i>
-		  Наш сайт</div>   
-		       </a>      
-		    </div>
-    </li>
-   	   	 <li class="accordion-item menu-back">
+    
+   	   	 <li class="accordion-item">
 			<div class="item-inner">
 			  <a href="question.html" data-ignore-cache="true" class="graylink close-panel">
 				<div class="item-title mainlinks panel_white">		 
@@ -216,16 +183,30 @@ if (n == 1) navigator.app.exitApp();
 		       </a>      
 		    </div>
     </li>
+   	 <li class="accordion-item">
+			<div class="item-inner">
+			  <a href="question.html" data-ignore-cache="true" class="graylink close-panel">
+				<div class="item-title mainlinks panel_white">		 
+		  <i class="material-icons icon-settings">help</i>
+		  Наш сайт</div>   
+		       </a>      
+		    </div>
+    </li>
+   	<li class="accordion-item">
+        
+			<div class="item-inner">
+			  <a href="#" data-ignore-cache="true" class="graylink" onClick="exitFromApp()">
 
-   	<li class="accordion-item menu-back">
-        <div class="item-inner">
-				<a href="#" data-ignore-cache="true" class="graylink" onClick="exitFromApp()">
-					<div class="item-title mainlinks panel_white">		 
-		     			<i class="material-icons icon-settings">cancel</i> Выход      
-                	</div>
-         		</a> 
+				<div class="item-title mainlinks panel_white">		 
+		      <i class="material-icons icon-settings">cancel</i> Выход      
+                </div>
+         </a> 
         </div> 
    	</li>
+
+   	
+   	
+
   </ul>
 </div>     
 	       
@@ -252,10 +233,10 @@ if (n == 1) navigator.app.exitApp();
             <div class="left">
            
               </div>
-            <div class="center"></div>
+            <div class="center sliding"></div>
             <div class="right">
               <!-- Right link contains only icon - additional "icon-only" class-->
-                <a href="#" class="link icon-only"> 
+                <a href="#" class="link icon-only open-panel"> 
               <i class="icon icon-bars"></i></a>
             </div>
           </div>
@@ -265,86 +246,58 @@ if (n == 1) navigator.app.exitApp();
           <!-- Page, data-page contains page name-->
           <div data-page="index" class="page">
             <!-- Scrollable page content-->
-                      <div class="page-content swipeout-content back_fon" >
-              <div class="content-block-title">ООО "Лабораторные Технологии"</div>
+            <div class="page-content swipeout-content">
+              <div class="content-block-title">
+              <h3>
+                  ООО "Лабораторные Технологии"
+              </h3></div>
               <div class="content-block">
                 <div class="content-block-inner">
                        <p>
                   	Наша организация ООО "Лабораторные Технологии" предлагает своим клиентам такое оборудование, как микрошприцы, различные пробоотборники и оборудование к ним, емкости из нержавеющей стали. 
                     </p>
                     
-                     <script type="text/javascript">
-
-function check111(){
-	var ss;
-	ss=document.FormOne.ygol1.value;
-	if (ss=='')
-	
-
-	{
-	alert("пусто");
-	}
-	else {
-	alert("есть значение"+" "+ss);
-	}
-/*	if(typeof(ss)!= NaN);
-	{
-	alert("22");
-}
-	else{
-		alert("44");
-	}
-}						 
-		/*if (document.FormOne.st2.value=="undefined")*/};				 
-
-						 
-						 
-						 
-</script>            
-<div class="content-block">  
-<div class="list-block cards-list">
-  <ul>
-
-       <li class="card">
-     <a href="1visota.html">
-      <div class="card-header">Расчет по основанию и высоте</div>
-		</a>
-    </li>
-    
-     <li class="card">
-          <a href="2ygol.html">
-      <div class="card-header">Расчет по углу и 2-м сторонам</div>
-		 </a>
-    </li>
-  
-        <li class="card">
-     <a href="3stor.html">
-      <div class="card-header">Расчет по 3 сторонам</div>
-		</a>
-    </li>
-    
-  </ul>
-</div>                        
-              
-<br>
-               
+       
+<ul>
+   <li>
+     Микрошприцы АГАТ МШ-10, МШ-1, МШ-50, Газохром (различного объема) 
+</li>
+  <li>
+      Различные пробоотборники ПГО и оборудование к ним 
+  </li>
+  <li>
+      Емкости из нержавеющей стали по чертежам заказчика.
+  </li>
+  <li>
+      Вискозиметр ВЗ-246 и ВЗ-4 для измерения условной вязкости жидкостей.
+  </li>
+  <li>
+      Запорная арматура и вентили точной регулировки и ВТР-1 и ВТР-1-М160
+  </li>
+  <li>
+       Бомбы Рейда
+  </li>
+   </ul>
+    <br> 
+<div class="list-block">
+             </div>      
+               <br><br>
+                  <br>
                 </div>
-              </div>   
+              </div>         
             </div>
-          </div>         
-		</div>
-	  </div>
-	</div>
+          </div>
+        </div>
         <!-- Bottom Toolbar--> 
       </div>
- 
-       <!-- Path to Framework7 Library JS-->
+    </div>
+    <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="js/framework7.min.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>        
-    <script>
+
+   <script>
     var myApp = new Framework7({
-  // поставить боковое скольжение у панели
-		//swipePanel: 'left'
+    swipePanel: 'left'
          });
     </script>
   </body>

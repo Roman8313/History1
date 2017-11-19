@@ -1,0 +1,146 @@
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+    <div class="center sliding">Services</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="services" class="page">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="content-block">
+        <div class="content-block-inner">
+          <p>Here is Services page!</p>
+          
+          <p>
+ <script>
+			 var base = 60; 
+var clocktimer,dateObj,dh,dm,ds,ms; 
+var readout=''; 
+var h=1,m=1,tm=1,s=0,ts=0,ms=0,init=0; 
+//функция для очистки поля
+function ClearСlock() { 
+	clearTimeout(clocktimer); 
+	h=1;m=1;tm=1;s=0;ts=0;ms=0; 
+	init=0;
+	readout='00:00:00.00'; 
+	document.MyForm.stopwatch.value=readout; 
+} 
+//функция для старта секундомера
+function StartTIME() { 
+	var cdateObj = new Date(); 
+	var t = (cdateObj.getTime() - dateObj.getTime())-(s*1000); 
+	if (t>999) { s++; } 
+	if (s>=(m*base)) { 
+		ts=0; 
+		m++; 
+	} else { 
+		ts=parseInt((ms/100)+s); 
+		if(ts>=base) { ts=ts-((m-1)*base); } 
+	} 
+	if (m>(h*base)) { 
+		tm=1; 
+		h++; 
+	} else { 
+		tm=parseInt((ms/100)+m); 
+		if(tm>=base) { tm=tm-((h-1)*base); } 
+	} 
+	ms = Math.round(t/10); 
+	if (ms>99) {ms=0;} 
+	if (ms==0) {ms='00';} 
+	if (ms>0&&ms<=9) { ms = '0'+ms; } 
+	if (ts>0) { ds = ts; if (ts<10) { ds = '0'+ts; }} else { ds = '00'; } 
+	dm=tm-1; 
+	if (dm>0) { if (dm<10) { dm = '0'+dm; }} else { dm = '00'; } 
+	dh=h-1; 
+	if (dh>0) { if (dh<10) { dh = '0'+dh; }} else { dh = '00'; } 
+	readout = dh + ':' + dm + ':' + ds + '.' + ms; 
+	document.MyForm.stopwatch.value = readout;
+        
+    var xx = Number.parseInt(ds);
+    xx=xx+20+Math.sin(xx);
+    document.MyForm.stopwatch2x.value = xx;
+    
+    var yy = Number.parseInt(ms);
+    if(yy==60){
+    yy=yy+100;
+    document.MyForm.stopwatch3x.value = yy;
+    }
+    
+	clocktimer = setTimeout("StartTIME()",1); 
+            
+} 
+//Функция запуска и остановки
+function StartStop() { 
+	if (init==0){ 
+		ClearСlock();
+		dateObj = new Date(); 
+		StartTIME(); 
+		init=1; 
+	} else { 
+		clearTimeout(clocktimer);
+		init=0;
+	} 
+} 
+function sss1(){
+	alert("Как дела?");
+} 
+			  </script>         	
+<form name=MyForm>   
+	<input type=button value="Обнулить" onclick="ClearСlock()">  <br>
+	<input name=stopwatch size=20 value="00:00:00.00" class="redcolor">  <br>
+	<p>
+        <input type=button value="Запуск/Остановить" onclick="StartStop()" class="button button-big"><br></p>
+	<input name=stopwatch2x><br>
+	
+	<input name=stopwatch3x>
+	<div class="list-block">
+  <ul>
+    <!-- Single radio input -->
+    <li>
+      <label class="label-radio item-content">
+        <!-- Checked by default -->
+        <input type="radio" name="my-radio" value="Books" checked="checked">
+        <div class="item-media">
+          <i class="icon icon-form-radio"></i>
+        </div>
+        <div class="item-inner">
+          <div class="item-title">Books</div>
+        </div>
+      </label>
+    </li>
+    <!-- Another radio input -->
+    <li>
+      <label class="label-radio item-content">
+        <input type="radio" name="my-radio" value="Movies">
+        <div class="item-media">
+          <i class="icon icon-form-radio"></i>
+        </div>
+        <div class="item-inner">
+          <div class="item-title">Movies</div>
+        </div>
+      </label>
+    </li>
+    ...
+  </ul>
+</div>  
+	
+	
+	<i class="icon icon-timer_fill "></i> 
+	<i class="f7-icons">home</i>
+	<i class="icon tabbar-demo-icon-1"></i>
+</form> 
+          	
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
