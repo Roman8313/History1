@@ -1,5 +1,5 @@
 /**
- * Framework7 1.6.3
+ * Framework7 1.6.4
  * Full featured mobile HTML framework for building iOS & Android apps
  * 
  * Google Material Theme
@@ -12,7 +12,7 @@
  * 
  * Licensed under MIT
  * 
- * Released on: May 30, 2017
+ * Released on: May 31, 2017
  */
 /*==========================
 Framework7 Layouts Themes
@@ -263,7 +263,7 @@ html:not(.ios):not(.android) .layout-dark .data-table tbody tr:hover {
 Framework7 Color Themes
 ==========================*/
 .theme-red .button:not(.button-fill) {
-  color: #f44336;
+  color: #ea1000;
 }
 .theme-red .navbar .button:not(.button-fill),
 .theme-red.navbar .button:not(.button-fill),
@@ -274,7 +274,7 @@ Framework7 Color Themes
   color: #fff;
 }
 .theme-red .button.button-fill {
-  background: #f44336;
+  background: #ea1000;
   color: #fff;
 }
 html:not(.watch-active-state) .theme-red .button.button-fill:active,
@@ -287,7 +287,7 @@ html:not(.watch-active-state) .theme-red .button.button-fill:active,
 }
 .progressbar.theme-red span,
 .theme-red .progressbar span {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .progressbar-infinite.theme-red,
 .theme-red .progressbar-infinite {
@@ -297,11 +297,11 @@ html:not(.watch-active-state) .theme-red .button.button-fill:active,
 .theme-red .progressbar-infinite:after,
 .progressbar-infinite.theme-red:before,
 .theme-red .progressbar-infinite:before {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .color-red i.icon,
 i.icon.color-red {
-  color: #f44336;
+  color: #ea1000;
 }
 i.icon-next.color-red,
 i.icon-next.theme-red {
@@ -325,7 +325,7 @@ i.icon-bars.theme-red {
 }
 .theme-red a,
 .theme-red .card a {
-  color: #f44336;
+  color: #434343;
 }
 .theme-red .navbar,
 .navbar.theme-red,
@@ -335,7 +335,8 @@ i.icon-bars.theme-red {
 .subnavbar.theme-red,
 .theme-red .searchbar,
 .searchbar.theme-red {
-  background-color: #f44336;
+  background-color: #ea1000;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.17); 
 }
 .theme-red .label-switch input[type="checkbox"]:checked + .checkbox,
 .label-switch.theme-red input[type="checkbox"]:checked + .checkbox {
@@ -343,7 +344,7 @@ i.icon-bars.theme-red {
 }
 .theme-red .label-switch input[type="checkbox"]:checked + .checkbox:after,
 .label-switch.theme-red input[type="checkbox"]:checked + .checkbox:after {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .theme-red label.label-checkbox i.icon-form-checkbox:after,
 label.label-checkbox.theme-red i.icon-form-checkbox:after {
@@ -361,12 +362,12 @@ label.label-checkbox.theme-red input[type="radio"]:checked ~ .item-after i.icon-
 label.label-checkbox.theme-red input[type="checkbox"]:checked ~ .item-inner i.icon-form-checkbox,
 .theme-red label.label-checkbox input[type="radio"]:checked ~ .item-inner i.icon-form-checkbox,
 label.label-checkbox.theme-red input[type="radio"]:checked ~ .item-inner i.icon-form-checkbox {
-  border-color: #f44336;
-  background-color: #f44336;
+  border-color: #ea1000;
+  background-color: #ea1000;
 }
 .theme-red label.label-radio i.icon-form-radio:after,
 label.label-radio.theme-red i.icon-form-radio:after {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .theme-red label.label-radio input[type="checkbox"]:checked + .item-media i.icon-form-radio,
 label.label-radio.theme-red input[type="checkbox"]:checked + .item-media i.icon-form-radio,
@@ -380,7 +381,7 @@ label.label-radio.theme-red input[type="radio"]:checked ~ .item-after i.icon-for
 label.label-radio.theme-red input[type="checkbox"]:checked ~ .item-inner i.icon-form-radio,
 .theme-red label.label-radio input[type="radio"]:checked ~ .item-inner i.icon-form-radio,
 label.label-radio.theme-red input[type="radio"]:checked ~ .item-inner i.icon-form-radio {
-  border-color: #f44336;
+  border-color: #ea1000;
 }
 .theme-red label.label-radio input[type="checkbox"]:checked + .item-media i.icon-form-radio:after,
 label.label-radio.theme-red input[type="checkbox"]:checked + .item-media i.icon-form-radio:after,
@@ -394,20 +395,20 @@ label.label-radio.theme-red input[type="radio"]:checked ~ .item-after i.icon-for
 label.label-radio.theme-red input[type="checkbox"]:checked ~ .item-inner i.icon-form-radio:after,
 .theme-red label.label-radio input[type="radio"]:checked ~ .item-inner i.icon-form-radio:after,
 label.label-radio.theme-red input[type="radio"]:checked ~ .item-inner i.icon-form-radio:after {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .theme-red .form-checkbox input[type="checkbox"]:checked ~ i,
 .form-checkbox.theme-red input[type="checkbox"]:checked ~ i {
-  border-color: #f44336;
-  background-color: #f44336;
+  border-color: #ea1000;
+  background-color: #ea1000;
 }
 .theme-red .form-radio input[type="radio"]:checked ~ i,
 .form-radio.theme-red input[type="radio"]:checked ~ i {
-  border-color: #f44336;
+  border-color: #ea1000;
 }
 .theme-red .form-radio input[type="radio"]:checked ~ i:after,
 .form-radio.theme-red input[type="radio"]:checked ~ i:after {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .theme-red .form-checkbox .ripple-wave,
 .theme-red .form-radio .ripple-wave {
@@ -415,37 +416,37 @@ label.label-radio.theme-red input[type="radio"]:checked ~ .item-inner i.icon-for
 }
 .theme-red .focus-state .label,
 .theme-red .focus-state .floating-label {
-  color: #f44336;
+  color: #ea1000;
 }
 .theme-red .item-input-field.focus-state:after,
 .theme-red .input-field.focus-state:after,
 .theme-red .item-input-field.not-empty-state:after,
 .theme-red .input-field.not-empty-state:after {
-  background: #f44336;
+  background: #ea1000;
 }
 .theme-red .picker-calendar-day.picker-calendar-day-today span {
-  color: #f44336;
+  color: #ea1000;
 }
 .theme-red .picker-calendar-day.picker-calendar-day-selected span {
-  background-color: #f44336;
+  background-color: #ea1000;
   color: #fff;
 }
 .theme-red .picker-calendar-day.picker-calendar-day-has-events span:after {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .theme-red .picker-header {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .theme-red .modal-button {
-  color: #f44336;
+  color: #ea1000;
 }
 .theme-red .timeline-horizontal .timeline-item-date,
 .timeline-horizontal.theme-red .timeline-item-date {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .theme-red .timeline-year-title,
 .theme-red .timeline-month-title {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .theme-red .statusbar-overlay {
   background-color: #B71C1C;
@@ -456,15 +457,15 @@ label.label-radio.theme-red input[type="radio"]:checked ~ .item-inner i.icon-for
 }
 .theme-red .data-table .data-table-title-selected,
 .data-table.theme-red .data-table-title-selected {
-  color: #f44336;
+  color: #ea1000;
 }
 .swiper-pagination.color-red .swiper-pagination-bullet-active,
 .theme-red .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .swiper-pagination.color-red .swiper-pagination-progressbar,
 .theme-red .swiper-pagination .swiper-pagination-progressbar {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .swiper-pagination.swiper-pagination-progress.bg-red {
   background-color: rgba(244, 67, 54, 0.25);
@@ -486,7 +487,7 @@ label.label-radio.theme-red input[type="radio"]:checked ~ .item-inner i.icon-for
 .floating-button.theme-red,
 .speed-dial-buttons a.theme-red {
   color: #fff;
-  background: #f44336;
+  background: #ea1000;
 }
 html:not(.watch-active-state) .theme-red .floating-button:active,
 html:not(.watch-active-state) .theme-red .speed-dial-buttons a:active,
@@ -506,26 +507,26 @@ html:not(.watch-active-state) .speed-dial-buttons a.theme-red:active,
 }
 .theme-red .range-slider input[type="range"]::-webkit-slider-thumb:before,
 .range-slider.theme-red input[type="range"]::-webkit-slider-thumb:before {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .theme-red .range-slider input[type="range"]::-webkit-slider-thumb,
 .range-slider.theme-red input[type="range"]::-webkit-slider-thumb {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .theme-red .range-slider input[type="range"]::-ms-thumb,
 .range-slider.theme-red input[type="range"]::-ms-thumb {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .theme-red .range-slider input[type="range"]::-ms-fill-lower,
 .range-slider.theme-red input[type="range"]::-ms-fill-lower {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .theme-red .range-slider input[type="range"]::-moz-range-thumb,
 .range-slider.theme-red input[type="range"]::-moz-range-thumb {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .badge.theme-red {
-  background-color: #f44336;
+  background-color: #ea1000;
   color: #fff;
 }
 .theme-pink .button:not(.button-fill) {
@@ -5852,26 +5853,26 @@ html:not(.watch-active-state) .speed-dial-buttons a.theme-black:active,
 Framework7 Color + Bg + Border
 ==========================*/
 .color-red {
-  color: #f44336;
+  color: #ea1000;
 }
 .list-block .item-link.list-button.color-red,
 .list-button.color-red,
 .list-block .item-link.color-red,
 .tabbar a.active.color-red,
 a.color-red {
-  color: #f44336;
+  color: #ea1000;
 }
 .label-switch input[type="checkbox"]:checked + .checkbox.color-red,
 .label-switch.color-red input[type="checkbox"]:checked + .checkbox {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .button.color-red:not(.button-fill),
 .color-red.buttons-row .button:not(.button-fill) {
-  color: #f44336 !important;
+  color: #ea1000 !important;
 }
 .button.button-fill.bg-red,
 .button.button-fill.color-red {
-  background: #f44336 !important;
+  background: #ea1000 !important;
   color: #fff;
 }
 html:not(.watch-active-state) .button.button-fill.bg-red:active,
@@ -5886,7 +5887,7 @@ html:not(.watch-active-state) .button.button-fill.color-red:active,
 }
 .progressbar.color-red span,
 .progressbar.bg-red span {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .progressbar-infinite.color-red,
 .progressbar-infinite.bg-red {
@@ -5896,27 +5897,27 @@ html:not(.watch-active-state) .button.button-fill.color-red:active,
 .progressbar-infinite.bg-red:after,
 .progressbar-infinite.color-red:before,
 .progressbar-infinite.bg-red:before {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .color-red i.icon,
 i.icon.color-red {
-  color: #f44336;
+  color: #ea1000;
 }
 .preloader.color-red svg circle,
 .preloader.preloader-red svg circle {
-  stroke: #f44336;
+  stroke: #ea1000;
 }
 .preloader.color-red .preloader-inner-gap,
 .preloader.preloader-red .preloader-inner-gap,
 .preloader.color-red .preloader-inner-half-circle,
 .preloader.preloader-red .preloader-inner-half-circle {
-  border-color: #f44336;
+  border-color: #ea1000;
 }
 .bg-red,
 a.bg-red,
 .list-block .swipeout-actions-left a.bg-red,
 .list-block .swipeout-actions-right a.bg-red {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 html:not(.watch-active-state) .list-block .bg-red .item-link:active,
 html:not(.watch-active-state) .list-block a.bg-red .item-link:active,
@@ -5945,7 +5946,7 @@ html:not(.watch-active-state) .list-block .item-link.list-block .swipeout-action
   background: #D32F2F;
 }
 .border-red {
-  border-color: #f44336;
+  border-color: #ea1000;
 }
 .list-block .border-red.item-inner:after,
 .list-block ul.border-red:after,
@@ -5953,14 +5954,14 @@ html:not(.watch-active-state) .list-block .item-link.list-block .swipeout-action
 .list-block .border-red.item-inner:before,
 .list-block ul.border-red:before,
 .border-red:before {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .floating-button.color-red,
 .speed-dial-buttons a.color-red,
 .floating-button.bg-red,
 .speed-dial-buttons a.bg-red {
   color: #fff;
-  background: #f44336;
+  background: #ea1000;
 }
 html:not(.watch-active-state) .floating-button.color-red:active,
 html:not(.watch-active-state) .speed-dial-buttons a.color-red:active,
@@ -5982,22 +5983,22 @@ html:not(.watch-active-state) .speed-dial-buttons a.bg-red:active,
   background-color: rgba(244, 67, 54, 0.3);
 }
 .range-slider.color-red input[type="range"]::-webkit-slider-thumb:before {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .range-slider.color-red input[type="range"]::-webkit-slider-thumb {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .range-slider.color-red input[type="range"]::-ms-thumb {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .range-slider.color-red input[type="range"]::-ms-fill-lower {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .range-slider.color-red input[type="range"]::-moz-range-thumb {
-  background-color: #f44336;
+  background-color: #ea1000;
 }
 .badge.color-red {
-  background-color: #f44336;
+  background-color: #ea1000;
   color: #fff;
 }
 .color-pink {
