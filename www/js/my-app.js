@@ -390,15 +390,13 @@ yg1=parseInt(document.FormThoo.ygol1.value);
 a1=document.FormThoo.st1.value;
 b1=document.FormThoo.st2.value;
 yg2=document.FormThoo.ygol1.value;	
-	alert(a1);
-	alert(b1);
-	alert(yg2);	
+
 	
 //Проверка на числа
 if (!isNaN(parseFloat(yg2)) && isFinite(yg2)){	
 if (!isNaN(parseFloat(a1)) && isFinite(a1)){
  if (!isNaN(parseFloat(b1)) && isFinite(b1)){
-	  	alert(yg1);
+
 yg1=Math.sin(yg1 / 180 * Math.PI);	
 yg1=(0.5)*(yg1*a*b);	
 	  myApp.alert(yg1, 'Результат');  
@@ -418,8 +416,7 @@ b=parseInt(document.Formonex.visota.value);
 	
 fn3a=document.Formonex.osnov.value;
 fn3b=document.Formonex.visota.value;
-	alert(fn3a);
-	alert(fn3b);
+
 	
 	if (!isNaN(parseFloat(fn3a)) && isFinite(fn3a)){
  if (!isNaN(parseFloat(fn3b)) && isFinite(fn3b)){
